@@ -5,10 +5,11 @@ node {
     stage('Pipeline Setup') {
         deleteDir()
         checkout scm
-        sh 'which cf'
+        sh 'echo $PATH'
         sh 'cf --help'
         sh 'cf help -a'
         sh 'cf add-network-policy --help'
+        sh 'which cf'
     }
 
     cleanUp()
