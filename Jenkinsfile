@@ -6,12 +6,10 @@ node {
         deleteDir()
         checkout scm
         sh 'echo $PATH'
+        sh 'which cf'
         sh 'cf --help'
         sh 'cf help -a'
         sh 'cf add-network-policy --help'
-        sh 'which cf'
     }
-
-    cleanUp()
 
 }
